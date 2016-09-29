@@ -40,7 +40,7 @@ public class App {
 				.build()
 				.addTransportAddress(
 						new InetSocketTransportAddress(InetAddress
-								.getByName("localhost"), 9300));
+								.getByName("localhost"), 9200));
 
 		Spark.get("/", (request, response) -> {
 			SearchResponse searchResponse = client.prepareSearch("music")
